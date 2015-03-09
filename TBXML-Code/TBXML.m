@@ -911,9 +911,9 @@
 		}
 	}
     
-#ifndef ARC_ENABLED
-    [super dealloc];
-#endif
+//#ifndef ARC_ENABLED
+//    [super dealloc];
+//#endif
 }
 
 - (TBXMLElement*) nextAvailableElement {

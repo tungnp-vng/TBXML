@@ -17,11 +17,7 @@
 	[request setHTTPMethod:@"GET"];
     
     
-#ifndef ARC_ENABLED
-    return [request autorelease];
-#else
     return request;
-#endif
     
 }
 
@@ -42,13 +38,8 @@
 	[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 	[request setValue:postLength forHTTPHeaderField:@"Content-Length"];
 	[request setHTTPBody:postData];
-
-#ifndef ARC_ENABLED
-    [params release];
-    return [request autorelease];
-#else
+    
     return request;
-#endif
 }
 
 @end
